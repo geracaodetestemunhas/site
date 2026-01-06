@@ -2,39 +2,72 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>II DESPERTA • Em Breve</title>
 
-  <title>II DESPERTA</title>
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Fonte forte e clean -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Logo flutuante estilo SBT -->
+  <div class="floating-logo" id="logo">
+    <img src="/files/icons/logo.png" alt="Geração de Testemunhas">
+  </div>
+
+  <!-- Easter egg -->
+  <div class="easter" id="easter">DES-PER-TA!</div>
+
   <main class="container">
-    <section class="hero">
-      <img src="files/icons/cross.svg" alt="" class="hero-icon">
+    <section class="hero reveal delay-1">
+      <span class="tag">II DESPERTA</span>
+      <h1>EM BREVE</h1>
 
-      <h1>II DESPERTA</h1>
-      <p class="subtitle">Algo está sendo preparado.</p>
+      <div class="countdown reveal delay-2" id="countdown">
+        <div class="time-block" id="block-days">
+          <span class="label">D</span>
+          <span class="value" id="days">00</span>
+        </div>
 
-      <span class="em-breve">EM BREVE</span>
+        <span class="colon">:</span>
 
-      <div class="countdown" id="countdown">
-        <span id="days">00</span>d
-        <span id="hours">00</span>h
-        <span id="minutes">00</span>m
-        <span id="seconds">00</span>s
+        <div class="time-block">
+          <span class="label">H</span>
+          <span class="value" id="hours">00</span>
+        </div>
+
+        <span class="colon">:</span>
+
+        <div class="time-block">
+          <span class="label">M</span>
+          <span class="value" id="minutes">00</span>
+        </div>
+
+        <span class="colon">:</span>
+
+        <div class="time-block">
+          <span class="label">S</span>
+          <span class="value" id="seconds">00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview reveal delay-3">
+      <div class="image-wrapper">
+        <img src="files/photos/preview.jpg" alt="Prévia II Desperta" />
+        <div class="vignette"></div>
+
+        <div class="glass-box">
+          <p>Inscrições não liberadas</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© Geração de Testemunhas • Todos os direitos reservados</p>
+    © Geração de Testemunhas • Todos os direitos reservados
   </footer>
 
   <script src="script.js"></script>
