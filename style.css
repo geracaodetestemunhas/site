@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+    url("files/photos/background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.85) 70%);
+  z-index: -1;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-icon {
+  width: 60px;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #ff2a2a;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  opacity: 0.85;
+}
+
+/* EM BREVE animado */
+.em-breve {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(255, 42, 42, 0);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 18px rgba(255, 42, 42, 0.5);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(255, 42, 42, 0);
+  }
+}
+
+/* Cronômetro */
+.countdown {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem 1rem;
+  min-width: 70px;
+  text-align: center;
+}
+
+.time-box span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff2a2a;
+}
+
+.time-box small {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.sobre, .inscricoes {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #ff4d4d;
+}
+
+.sobre p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Inscrições com blur */
+.blur-box {
+  margin-top: 1rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  filter: blur(4px);
+}
+
+.blur-box button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background: #ff2a2a;
+  color: #fff;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.inscricoes small {
+  display: block;
+  margin-top: 1rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .hero-icon {
+    width: 45px;
+  }
+
+  .time-box {
+    min-width: 60px;
+  }
+}
